@@ -5,14 +5,16 @@ window.onload = function () {
   const centerX = svg.width / 2
   const bottom = svg.height
 
-  let tree = []
+  const tree = []
 
-  let treeColor = '#eee'
-  let startLength = centerX / 2.8
-  let angleRight = 25
-  let angleLeft = 45
-  let startDirection = -90
-  let startStrokeWidth = 35
+  const treeColor = '#eee'
+  const startLength = centerX / 2.5
+  const angleRight = 27
+  const angleLeft = 52
+  const lengthRight = 0.72
+  const lengthLeft = 0.67
+  const startDirection = -90
+  const startStrokeWidth = 35
   let repeat = 8
 
   // Start Branch class constructor
@@ -41,7 +43,7 @@ window.onload = function () {
 
     newBranchLeft () {
       const newAngleL = this.dir - angleLeft
-      const newLengthL = this.len * 0.67
+      const newLengthL = this.len * lengthLeft
       const newWidthL = this.width * 0.67
 
       const newXL = Math.cos((Math.PI / 180) * newAngleL) * newLengthL + this.endX
@@ -60,7 +62,7 @@ window.onload = function () {
 
     newBranchRight () {
       const newAngleR = this.dir + angleRight
-      const newLengthR = this.len * 0.75
+      const newLengthR = this.len * lengthRight
       const newWidthR = this.width * 0.67
 
       const newXR = Math.cos((Math.PI / 180) * newAngleR) * newLengthR + this.endX
@@ -76,11 +78,37 @@ window.onload = function () {
         newWidthR
       )
     }
+
+    move (random) {
+      this.endX += random
+      this.endY += random
+    }
   }
 
   // E/O Branch class
 
-  // Create branches function
+  // CLear screen (function)
+  const clearScreen = () => {
+    ctx.fillStyle = '#001a28'
+    ctx.fillRect(0, 0, centerX * 2, bottom)
+  }
+  // E/O CLear screen (function)
+
+  // Create root (function)
+  const createRoot = () => {
+    tree[0] = new Branch(
+      centerX,
+      bottom,
+      centerX,
+      bottom - startLength,
+      startDirection,
+      startLength,
+      startStrokeWidth
+    )
+  }
+  // E/O Create root (function)
+
+  // Create branches (function)
   const createBranches = () => {
     for (let i = tree.length - 1; i >= 0; i--) {
       if (!tree[i].finished) {
@@ -96,24 +124,34 @@ window.onload = function () {
       createBranches()
     }
   }
+  // E/O Create branches (function)
 
+  // Show branches (function)
   const showBranches = () => {
     for (let i = 0; i < tree.length; i++) {
       tree[i].show()
     }
   }
+  // E/O show branches (function)
 
-  // Create root
-  tree[0] = new Branch(
-    centerX,
-    bottom,
-    centerX,
-    bottom - startLength,
-    startDirection,
-    startLength,
-    startStrokeWidth
-  )
+  // Draw tree (function)
+  const drawTree = () => {
+    createRoot()
+    createBranches()
+    showBranches()
+  }
+  // E/O Draw tree (function)
 
-  createBranches()
-  showBranches()
+  drawTree() // invoke
+
+  // Mousemove event listener
+  window.addEventListener('mousemove', e => {
+    clearScreen()
+
+    let random = Math.random() - Math.random()
+    for (let i = (tree.length - 1) / 2; i < tree.length; i++) {
+      tree[i].move(random / 5)
+    }
+    showBranches()
+  })
 }
