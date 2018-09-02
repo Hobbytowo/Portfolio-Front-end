@@ -134,11 +134,26 @@ window.onload = function () {
   }
   // E/O show branches (function)
 
+  // Create leaves (function)
+  const createLeaves = () => {
+    for (let i = (tree.length - 1) / 2; i < tree.length; i++) {
+      ctx.beginPath()
+      let colorR = Math.random() * 255
+      let colorG = Math.random() * (255 - 100) + 100
+      ctx.fillStyle = `rgb(${ colorR }, ${ colorG }, 24)`
+      ctx.arc(tree[i].endX, tree[i].endY, 3, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.stroke()
+    }
+  }
+  // E/O Create leaves (function)
+
   // Draw tree (function)
   const drawTree = () => {
     createRoot()
     createBranches()
     showBranches()
+    createLeaves()
   }
   // E/O Draw tree (function)
 
@@ -150,8 +165,9 @@ window.onload = function () {
 
     let random = Math.random() - Math.random()
     for (let i = (tree.length - 1) / 2; i < tree.length; i++) {
-      tree[i].move(random / 5)
+      tree[i].move(random / 3)
     }
     showBranches()
+    createLeaves()
   })
 }
