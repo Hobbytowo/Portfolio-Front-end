@@ -12,9 +12,11 @@
   background-color: #001a28;
 
   &__canvas {
+    width: 800px;
+    height: 600px;
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    left: calc(50vw - 400px);
   }
 
   &__title, &__subtitle{
