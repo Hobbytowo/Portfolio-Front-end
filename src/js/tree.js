@@ -8,7 +8,7 @@ window.onload = function () {
   const tree = []
 
   const treeColor = '#eee'
-  const startLength = centerX / 2.5
+  const startLength = bottom / 3.5
   const angleRight = 27
   const angleLeft = 52
   const lengthRight = 0.72
