@@ -1,5 +1,5 @@
 window.onload = function () {
-  const svg = document.querySelector('.svg')
+  const svg = document.querySelector('.header__canvas')
   const ctx = svg.getContext('2d')
 
   const centerX = svg.width / 2
@@ -7,14 +7,16 @@ window.onload = function () {
 
   const tree = []
 
-  const treeColor = '#eee'
+  const treeColor = '#ccc'
   const startLength = bottom / 3.5
   const angleRight = 27
   const angleLeft = 52
   const lengthRight = 0.72
   const lengthLeft = 0.67
   const startDirection = -90
-  const startStrokeWidth = 35
+  const startStrokeWidth = 60
+  const widthLeft = 0.5
+  const widthRight = 0.67
   let repeat = 8
 
   // Start Branch class constructor
@@ -44,7 +46,7 @@ window.onload = function () {
     newBranchLeft () {
       const newAngleL = this.dir - angleLeft
       const newLengthL = this.len * lengthLeft
-      const newWidthL = this.width * 0.67
+      const newWidthL = this.width * widthLeft
 
       const newXL = Math.cos((Math.PI / 180) * newAngleL) * newLengthL + this.endX
       const newYL = Math.sin((Math.PI / 180) * newAngleL) * newLengthL + this.endY
@@ -63,7 +65,7 @@ window.onload = function () {
     newBranchRight () {
       const newAngleR = this.dir + angleRight
       const newLengthR = this.len * lengthRight
-      const newWidthR = this.width * 0.67
+      const newWidthR = this.width * widthRight
 
       const newXR = Math.cos((Math.PI / 180) * newAngleR) * newLengthR + this.endX
       const newYR = Math.sin((Math.PI / 180) * newAngleR) * newLengthR + this.endY

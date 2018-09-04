@@ -3,18 +3,35 @@
 .header {
   width: 100%;
   height: 100vh;
-  color: #ddd;
   position: relative;
+  color: #ccc;
   background-color: #001a28;
+  display: flex;
 
   &__canvas {
     width: calc(100vh / 6 * 8);
     height: 100vh;
-    position: absolute;
-    bottom: 0;
-    left: calc(50vw - 100vh / 6 * 8 / 2);
   }
 
-  &__title, &__subtitle{
+  & .column--right{
+    padding: 30px;
+  }
+
+  & .text{
+    &--subtitle{
+      position: absolute;
+      bottom: 15%;
+      right: 10%;
+    }
+    &--small{
+      color: #f48342;
+      font-size: 58%;
+      display: block;
+      text-transform: uppercase;
+    }
+    &--color{
+      color: #f48342;
+      font-size: 250%;
+    }
   }
 }
