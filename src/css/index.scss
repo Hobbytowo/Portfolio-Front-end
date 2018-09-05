@@ -1,5 +1,7 @@
 @import "reset";
 
+// Start Header
+
 .header {
   width: 100%;
   height: 100vh;
@@ -35,3 +37,92 @@
     }
   }
 }
+
+// E/O Header
+
+// Start Projects
+
+.projects{
+  padding: 50px;
+
+  &__title{
+    margin: 50px;
+    text-align: center;
+  }
+
+  & .menu{
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-bottom: 60px;
+
+    &__filter{
+      color: #333;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    & .selected{
+      border-bottom: 5px solid #f48342;
+      color: black;
+    }
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap
+  }
+
+  & .project{
+    margin: 40px;
+    width: 38%;
+    &:nth-child(n) {
+      background-color: #001a28;
+    }
+    &:nth-child(2n) {
+      background-color: #009111;
+    }
+    &:nth-child(3n) {
+      background-color: #76008e;
+    }
+    &:nth-child(4n) {
+      background-color: #f48342;
+    }
+
+    &__img{
+      display: flex;
+      width: 100%;
+      box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
+      transition: all 0.3s;
+      &:hover{
+        opacity: 0.3;
+      }
+    }
+  }
+
+}
+
+@keyframes underlineIn {
+  0% {
+    height: 20px;
+    width: 0
+  }
+  100% {
+    height: 20px;
+    width: 100%
+  }
+}
+
+@keyframes underlineOut {
+  0% {
+    height: 20px;
+    width: 100%
+  }
+  100% {
+    height: 0;
+    width: 100%
+  }
+}
+
+// E/O Projects
