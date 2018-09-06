@@ -63,7 +63,7 @@
 
   &__container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -172,6 +172,43 @@
   }
 }
 
-
-
 // E/O Projects
+
+
+// START About
+
+.about{
+  padding: 0 20%;
+
+  &__title{
+    padding: 100px 0 30px;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  &__par{
+    font-size: 18px;
+    text-align: justify;
+    padding: 20px;
+  }
+
+  & .par--center{
+    text-align: center;
+  }
+}
+
+.features{
+  display: flex;
+  justify-content: space-around;
+  & .feature{
+    width: 50px;
+    height: 50px;
+    background: #f48342;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
+
+// E/O About
