@@ -1,4 +1,5 @@
 window.onload = function () {
+  const header = document.querySelector('.header')
   const svg = document.querySelector('.header__canvas')
   const ctx = svg.getContext('2d')
 
@@ -162,7 +163,7 @@ window.onload = function () {
   drawTree() // invoke
 
   // Mousemove event listener
-  window.addEventListener('mousemove', e => {
+  header.addEventListener('mousemove', e => {
     clearScreen()
 
     let random = Math.random() - Math.random()
