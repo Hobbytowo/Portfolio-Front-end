@@ -237,3 +237,25 @@ body{
 
 
 // E/O About
+
+// START Contact section
+
+.contact{
+  background-color: #001a28;
+  color: #fff;
+  margin-top: 50px;
+
+  &__title{
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    background-color: #ccc;
+    margin: 10%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+  }
+}
+
+
+// E/O Contact section
