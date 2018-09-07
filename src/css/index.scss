@@ -326,6 +326,7 @@ body{
   margin: 0;
   animation: arrow 1.5s infinite;
   position: absolute;
+  top: -15px;
   right: calc(3rem);
   color: #00b740;
   &:hover{
@@ -335,10 +336,12 @@ body{
 
 @keyframes arrow {
   0% {
-    top: 5px;
+    padding-top: 30px;
+    padding-bottom: 0px;
   }
   100% {
-    top: -25px;
+    padding-top: 0px;
+    padding-bottom: 30px;
   }
 }
 
