@@ -246,16 +246,100 @@ body{
   margin-top: 50px;
 
   &__title{
+    padding: 100px 0 30px;
     text-align: center;
-    font-size: 30px;
-    color: #333;
-    background-color: #ccc;
-    margin: 10%;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    padding-bottom: 10px;
+    font-size: 50px;
+  }
+
+  &__subtitle{
+    text-align: center;
+    color: #f7ef5d;
+    padding: 20px;
+  }
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto 0;
+
+  &__input, &__textarea{
+    width: 400px;
+    background-color: #001019;
+    margin: 5px;
+    padding: 10px 15px;
+    color: #fff;
+  }
+
+  &__button{
+    background-color: #001a28;
+    margin: 10px auto 60px;
+    color: #ccc;
+    border-color: #ccc;
+    border-radius: 0;
+    &:hover{
+      background: #f7ef5d;
+      border-color: #f7ef5d;
+      color: #222;
+    }
   }
 }
 
 
 // E/O Contact section
+
+// START Footer
+
+.footer{
+  background-color: #001019;
+  color: #ddd;
+  text-align: center;
+  padding: 60px 0 40px;
+  position: relative;
+
+  & .text{
+    &--color{
+      color: #00b740;
+    }
+  }
+
+  & .icons{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.fas, .fab{
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.3s;
+  margin: -20px 40px 30px;
+  &:hover{
+    color: #f7ef5d;
+  }
+}
+
+.fa-angle-double-up{
+  font-size: 3rem;
+  margin: 0;
+  animation: arrow 1.5s infinite;
+  position: absolute;
+  right: calc(3rem);
+  color: #00b740;
+  &:hover{
+    color: white;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: -25px;
+  }
+}
+
+// E/O Footer
