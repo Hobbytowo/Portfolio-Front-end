@@ -152,12 +152,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
   }
-
-  & .showContent{
-    display: block;
-  }
 }
-
 
 .button{
   width: 80px;
@@ -169,6 +164,39 @@ body{
   transition: all 0.3s;
   &:hover{
     background-color: #f48342;
+  }
+}
+
+.hideProject{
+  transform-origin: 50%;
+  animation: hideProject 1s forwards;
+}
+
+.showProject{
+  transform-origin: 50%;
+  animation: showProject 1s forwards;
+}
+
+@keyframes hideProject {
+  0%{
+    transform: scale(1);
+    position: absolute;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: 50%;
+    position: absolute;
+  }
+}
+
+@keyframes showProject {
+  0%{
+    transform: scale(0);
+    position: relative;
+  }
+  100% {
+    transform: scale(1);
+    position: relative;
   }
 }
 

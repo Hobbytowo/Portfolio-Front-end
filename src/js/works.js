@@ -111,6 +111,9 @@ const projectsContainer = document.querySelector('.projects__container')
 const addProject = project => {
   const article = document.createElement('article')
   article.classList.add('projects__project', 'project', `project--${ project.name }`)
+  Object.defineProperty(article, 'filters', {
+    value: `${ project.filters }`
+  })
 
   article.innerHTML = `
     <img
@@ -152,6 +155,8 @@ const projectsMenu = document.querySelector('.projects__menu')
 const filters = document.querySelectorAll('.filter')
 
 projectsMenu.addEventListener('click', e => {
+  const allProjects = document.querySelectorAll('.project')
+  const hiddenProjects = document.querySelectorAll('.hideProject')
   const filter = e.target
   const filterName = filter.textContent
 
@@ -159,7 +164,7 @@ projectsMenu.addEventListener('click', e => {
     return
   }
 
-  // Remove and add classes
+  // Remove and add manu classes
 
   [...filters].forEach(filter => {
     filter.classList.add('filter--deselected')
@@ -169,18 +174,25 @@ projectsMenu.addEventListener('click', e => {
   filter.classList.add('filter--selected')
   filter.classList.remove('filter--deselected')
 
-  // fitering projectsMenu
+  // Filtering projects
 
-  const filteredProjects = projects.filter(project => {
-    return project.filters.some(filter => filter === filterName)
+  const projectsToHide = [...allProjects].filter(project => {
+    return project.filters.split(',').every(filter => filter !== filterName)
   })
 
-  // show only filtred projects
-  projectsContainer.innerHTML = ''
-  filteredProjects.forEach(project => {
-    addProject(project)
+  const projectsToShow = [...hiddenProjects].filter(project => {
+    return project.filters.split(',').some(filter => filter === filterName)
   })
 
+  projectsToShow.forEach(project => {
+    project.classList.add('showProject')
+    project.classList.remove('hideProject')
+  })
+
+  projectsToHide.forEach(project => {
+    project.classList.remove('showProject')
+    project.classList.add('hideProject')
+  })
 })
 
 // E/O Dynamic filtering projects
