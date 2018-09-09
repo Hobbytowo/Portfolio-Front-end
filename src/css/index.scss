@@ -169,12 +169,12 @@ body{
 
 .hideProject{
   transform-origin: 50%;
-  animation: hideProject 1s forwards;
+  animation: hideProject 0.8s forwards;
 }
 
 .showProject{
   transform-origin: 50%;
-  animation: showProject 1s forwards;
+  animation: showProject 0.8s forwards;
 }
 
 @keyframes hideProject {
