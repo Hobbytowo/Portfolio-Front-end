@@ -277,12 +277,15 @@ body{
     padding: 100px 0 30px;
     text-align: center;
     font-size: 50px;
+    font-style: normal;
   }
 
   &__subtitle{
     text-align: center;
     color: #f7ef5d;
     padding: 20px;
+    font-style: normal;
+    transition: all 0.2s;
   }
 }
 
@@ -293,11 +296,12 @@ body{
   margin: 40px auto 0;
 
   &__input, &__textarea{
-    width: 400px;
-    background-color: #001019;
+    width: 450px;
+    font-size: 17px;
     margin: 5px;
     padding: 10px 15px;
     color: #fff;
+    background-color: #001019;
   }
 
   &__button{
