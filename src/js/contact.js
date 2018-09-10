@@ -3,6 +3,10 @@
 const title = document.querySelector('.title')
 
 title.addEventListener('mouseover', () => {
+  if (title.textContent === `Let's code!`) {
+    return
+  }
+
   title.style.opacity = 0
   window.setTimeout(() => {
     title.textContent = `Let's code!`
@@ -12,6 +16,10 @@ title.addEventListener('mouseover', () => {
 })
 
 title.addEventListener('mouseout', () => {
+  if (title.textContent === `Let's talk!`) {
+    return
+  }
+
   title.style.opacity = 0
   window.setTimeout(() => {
     title.textContent = `Let's talk!`
