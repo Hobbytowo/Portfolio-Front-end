@@ -398,20 +398,11 @@ body{
     text-align: center;
     padding-top: 15px;
 
-    &:nth-child(5n - 4){
-      background-color: #f48342;
-    }
-    &:nth-child(5n - 3){
+    &:nth-child(odd){
       background-color: #f7ef5d;
     }
-    &:nth-child(5n - 2){
+    &:nth-child(even){
       background-color: #00b740;
-    }
-    &:nth-child(5n - 1){
-      background-color: #f7ef5d;
-    }
-    &:nth-child(5n){
-      background-color: #f48342;
     }
   }
 }
