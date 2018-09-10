@@ -1,6 +1,14 @@
 @import "reset";
 
-// General
+// Variables
+$treeHeight: 100vh;
+$treeWidth: calc(#{ $treeHeight } / 6 * 8);
+$treeCenter: calc(50vw - #{ $treeWidth } / 2);
+
+$aspectRatio2-1: "(max-aspect-ratio: 2/1)";
+$aspectRatio5-4: "(max-aspect-ratio: 5/4)";
+
+// General style
 
 *{
   font-family: 'Poiret One', cursive, arial;
@@ -8,6 +16,7 @@
 
 body{
   background-color: #ccc;
+  overflow-x: hidden;
 }
 
 // Start Header
@@ -21,23 +30,23 @@ body{
   display: flex;
 
   &__canvas {
-    width: calc(100vh / 6 * 8);
-    height: 100vh;
+    width: $treeWidth;
+    height: $treeHeight;
   }
 
   & .column--right{
-    padding: 30px;
+    padding: 50px;
   }
 
   & .text{
     &--subtitle{
       position: absolute;
       bottom: 15%;
-      right: 10%;
+      right: 15%;
     }
     &--small{
       color: #f48342;
-      font-size: 58%;
+      font-size: 68%;
       display: block;
       text-transform: uppercase;
     }
@@ -48,6 +57,97 @@ body{
   }
 }
 
+
+@media #{$aspectRatio2-1} {
+  .header{
+    height: auto;
+    flex-direction: column;
+    padding-bottom: $treeHeight;
+
+    &__canvas {
+      position: absolute;
+      bottom: 0;
+      right: $treeCenter;
+    }
+
+    & .column--right{
+      order: -1;
+    }
+
+    & .text{
+      &--title{
+        padding: 20px 50px;
+      }
+      &--subtitle{
+        top: 8%;
+        right: 20%;
+      }
+    }
+  }
+}
+
+@media #{$aspectRatio5-4} {
+  .header{
+    &__canvas {
+      width: 100vw;
+      height: 100vw / 8 * 6;
+      right: 0;
+    }
+
+    & .text--subtitle{
+        top: 35%;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .header{
+    & .column--right{
+      padding: 30px;
+    }
+
+    & .text{
+      &--subtitle{
+        right: 10%;
+      }
+      &--small{
+        font-size: 58%;
+      }
+    }
+  }
+}
+
+@media (max-width: 755px) {
+  .header{
+    padding-bottom: 0;
+    width: 100%;
+    height: calc(100vh + 100vw / 8 * 6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    & .column--right{
+      padding: 0;
+    }
+
+    & .text{
+      &--title{
+        text-align: center;
+      }
+      &--color{
+        font-size: 100%;
+      }
+      &--subtitle{
+        position: relative;
+        text-align: center;
+        right: auto;
+      }
+    }
+  }
+}
+
+
+
 // E/O Header
 
 // Start Projects
@@ -56,7 +156,7 @@ body{
   padding: 50px;
 
   &__title{
-    margin: 100px;
+    margin: 100px auto;
     text-align: center;
     font-size: 50px;
     color: #333;
@@ -70,6 +170,15 @@ body{
   }
 }
 
+@media (max-width: 636px) {
+  .projects{
+    padding: 20px;
+      &__title{
+        margin-bottom: 50px;
+      }
+  }
+}
+
 
 .menu{
   display: inline-flex;
@@ -79,10 +188,12 @@ body{
 
   &__filter{
     margin: 10px;
+    font-size: 20px;
   }
 }
 
 .filter{
+
   &--deselected{
     color: #333;
     cursor: pointer;
@@ -103,6 +214,13 @@ body{
   &--selected{
     color: black;
     border-bottom: 4px solid #f48342;
+  }
+}
+
+@media (max-width: 636px) {
+  .filter{
+    font-size: 16px;
+    margin: 5px;
   }
 }
 
@@ -137,13 +255,13 @@ body{
   &__title{
     color: #fff;
     text-transform: uppercase;
-    padding-top: 30px;
+    padding-top: 10%;
     text-align: center;
   }
 
   &__discritpion{
     color: #fff;
-    padding: 5px 0 30px;
+    padding: 5px 5px 30px;
     text-align: center;
     font-size: 15px;
   }
@@ -155,16 +273,49 @@ body{
   }
 }
 
+@media (min-width: 1396px){
+  .project{
+    width: 23%;
+
+    &__discritpion{
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1062px) {
+  .project{
+    width: 45%;
+  }
+}
+
+@media (max-width: 662px) {
+  .project{
+    width: 95%;
+  }
+}
+
+@media (max-width: 362px) {
+  .project{
+    width: 98%;
+
+    &__title{
+      padding: 5px;
+    }
+  }
+}
+
 .button{
   width: 80px;
   height: 40px;
   border: 2px solid black;
   border-radius: 5px;
   color: black;
+  background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
   &:hover{
-    background-color: #f48342;
+    border-color: #fff;
   }
 }
 
@@ -265,6 +416,32 @@ body{
   }
 }
 
+@media (min-width: 1396px){
+  .about{
+    padding: 0 30%;
+  }
+}
+
+@media (max-width: 956px){
+  .about{
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 456px){
+  .about{
+    padding: 0 4%;
+
+    & .text{
+      text-align: left;
+
+      &--center{
+        text-align: center;
+      }
+    }
+  }
+}
+
 
 // E/O About
 
@@ -273,10 +450,13 @@ body{
 .contact{
   background-color: #001a28;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 150px;
+
+  &__content{
+    padding: 100px 0;
+  }
 
   &__title{
-    padding: 100px 0 30px;
     text-align: center;
     font-size: 40px;
     font-style: normal;
@@ -288,13 +468,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
   }
 
   &__item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px;
   }
 
   &__icon{
@@ -315,6 +495,34 @@ body{
   }
 }
 
+@media (max-width: 956px){
+  .contact{
+    &__item{
+      padding: 20px;
+    }
+    &__content{
+      padding: 50px;
+    }
+  }
+}
+
+@media (max-width: 647px){
+  .contact{
+
+    &__data{
+      flex-direction: column;
+    }
+
+    &__title{
+      padding: 50px 0;
+    }
+
+    &__item{
+      padding: 20px 0;
+    }
+  }
+}
+
 
 // E/O Contact section
 
@@ -324,7 +532,8 @@ body{
   background-color: #001019;
   color: #ddd;
   text-align: center;
-  padding: 60px 0 40px;
+  padding: 60px 0 60px;
+  font-size: 18px;
   position: relative;
 
   & .text{
@@ -354,7 +563,7 @@ body{
     margin: 0;
     animation: arrow 1.5s infinite;
     position: absolute;
-    top: -15px;
+    top: -20px;
     right: calc(3rem);
     color: #00b740;
     &:hover{
@@ -362,8 +571,6 @@ body{
     }
   }
 }
-
-
 
 @keyframes arrow {
   0% {
@@ -373,6 +580,18 @@ body{
   100% {
     padding-top: 0px;
     padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 487px){
+  .footer{
+    & .fas, .fab{
+      margin: 0 10px 30px;
+    }
+
+    & .fa-angle-double-up{
+      right: calc(1rem);
+    }
   }
 }
 
