@@ -208,9 +208,7 @@ const showContent = content => {
 
 const hideContent = content => {
   content.style.opacity = '0'
-  window.setTimeout(() => {
-    content.style.display = 'none'
-  }, 400)
+  content.style.display = 'none'
 }
 
 [...allProjects].forEach(project => {
