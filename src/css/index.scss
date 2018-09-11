@@ -231,6 +231,8 @@ body{
   position: relative;
 
   &__content{
+    display: none;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -240,12 +242,10 @@ body{
 
     opacity: 0;
     transition: all 0.4s;
-    &:hover{
-      opacity: 1;
-    }
   }
 
   &__img{
+    position: relative;
     width: 100%;
     display: flex;
     border-radius: 10px;
@@ -257,13 +257,14 @@ body{
     text-transform: uppercase;
     padding-top: 10%;
     text-align: center;
+    font-size: 140%;
   }
 
   &__discritpion{
     color: #fff;
     padding: 5px 5px 30px;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   &__buttons{
@@ -271,6 +272,10 @@ body{
     flex-direction: row;
     justify-content: space-around;
   }
+}
+
+.showContent{
+  opacity: 1;
 }
 
 @media (min-width: 1396px){
@@ -301,6 +306,7 @@ body{
 
     &__title{
       padding: 5px;
+      font-size: 100%;
     }
   }
 }
@@ -312,6 +318,7 @@ body{
   border-radius: 5px;
   color: black;
   background-color: #fff;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
   &:hover{

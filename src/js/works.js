@@ -153,9 +153,9 @@ projects.forEach(project => {
 
 const projectsMenu = document.querySelector('.projects__menu')
 const filters = document.querySelectorAll('.filter')
+const allProjects = document.querySelectorAll('.project')
 
 projectsMenu.addEventListener('click', e => {
-  const allProjects = document.querySelectorAll('.project')
   const hiddenProjects = document.querySelectorAll('.hideProject')
   const filter = e.target
   const filterName = filter.textContent
@@ -196,3 +196,49 @@ projectsMenu.addEventListener('click', e => {
 })
 
 // E/O Dynamic filtering projects
+
+// START Show and hide project content
+
+const showContent = content => {
+  content.style.display = 'block'
+  window.setTimeout(() => {
+    content.style.opacity = '1'
+  }, 1)
+}
+
+const hideContent = content => {
+  content.style.opacity = '0'
+  window.setTimeout(() => {
+    content.style.display = 'none'
+  }, 400)
+}
+
+[...allProjects].forEach(project => {
+  // events for hover
+  project.addEventListener('mouseenter', e => {
+    const content = e.target.children[1]
+
+    showContent(content)
+
+    content.addEventListener('mouseleave', e => {
+      hideContent(content)
+    })
+  })
+
+  // events for click - mobile
+  project.addEventListener('click', e => {
+    if (e.target.nodeName !== 'IMG') {
+      return
+    }
+
+    const content = e.target.nextElementSibling
+
+    showContent(content)
+
+    window.setTimeout(() => {
+      hideContent(content)
+    }, 5000)
+  })
+})
+
+// E/O Show and hide project content
