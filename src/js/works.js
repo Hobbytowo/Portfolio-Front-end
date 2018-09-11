@@ -97,7 +97,7 @@ const projects = [
     imgAlt: 'Header of this website',
     bgColor: '#001a28',
     codeLink: 'https://github.com/Hobbytowo/Portfolio-Front-end',
-    liveLink: '',
+    liveLink: 'https://portfolio-frontend-kedzioraweronika.netlify.com/',
     filters: ['Show all', 'Website', 'JavaScript', 'SASS', 'Canvas', 'Gulp']
   }
 ]
