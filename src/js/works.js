@@ -200,7 +200,7 @@ projectsMenu.addEventListener('click', e => {
 // START Show and hide project content
 
 const showContent = content => {
-  content.style.display = 'block'
+  content.style.display = 'flex'
   window.setTimeout(() => {
     content.style.opacity = '1'
   }, 1)
