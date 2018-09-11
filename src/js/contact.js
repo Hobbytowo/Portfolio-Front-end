@@ -16,10 +16,6 @@ title.addEventListener('mouseover', () => {
 })
 
 title.addEventListener('mouseout', () => {
-  if (title.textContent === `Let's talk!`) {
-    return
-  }
-
   title.style.opacity = 0
   window.setTimeout(() => {
     title.textContent = `Let's talk!`

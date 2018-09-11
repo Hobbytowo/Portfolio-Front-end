@@ -146,9 +146,8 @@ body{
   }
 }
 
-
-
 // E/O Header
+
 
 // Start Projects
 
@@ -440,8 +439,8 @@ body{
   }
 }
 
-
 // E/O About
+
 
 // START Contact section
 
@@ -451,7 +450,7 @@ body{
   margin-top: 150px;
 
   &__content{
-    padding: 100px 0;
+    padding-bottom: 100px;
   }
 
   &__title{
@@ -460,6 +459,8 @@ body{
     font-style: normal;
     color: #f7ef5d;
     transition: all 0.2s;
+    padding-top: 150px;
+    padding-bottom: 60px;
   }
 
   &__data{
@@ -472,7 +473,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
+    padding: 0 60px;
   }
 
   &__icon{
@@ -498,9 +499,6 @@ body{
     &__item{
       padding: 20px;
     }
-    &__content{
-      padding: 50px;
-    }
   }
 }
 
@@ -521,8 +519,8 @@ body{
   }
 }
 
-
 // E/O Contact section
+
 
 // START Footer
 
@@ -596,7 +594,7 @@ body{
 // E/O Footer
 
 
-/* Star Preloader */
+// Star Preloader
 
 .preloader {
     background-color: #001a28;
@@ -641,4 +639,4 @@ body{
     }
 }
 
-/* E/O Preloader */
+// E/O Preloader
