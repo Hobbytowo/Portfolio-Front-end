@@ -125,12 +125,20 @@ const addProject = project => {
       <h4 class="project__discritpion">${ project.discritpion }</h4>
       <div class="project__buttons">
         <a href="${ project.codeLink }">
-          <button type="button" class="project__button button button--code">
+          <button
+            type="button"
+            class="project__button button button--code"
+            disabled="true"
+            >
             Code
           </button>
         </a>
         <a href="${ project.liveLink }">
-          <button type="button" class="project__button button button--live">
+          <button
+            type="button"
+            class="project__button button button--live"
+            disabled="true"
+            >
             Live
           </button>
         </a>
@@ -202,6 +210,11 @@ projectsMenu.addEventListener('click', e => {
 const showContent = content => {
   content.style.display = 'flex'
   window.setTimeout(() => {
+    const buttons = content.querySelectorAll('.button')
+    Array.from(buttons).forEach(button => {
+      button.disabled = false
+    })
+
     content.style.opacity = '1'
   }, 1)
 }
@@ -209,6 +222,11 @@ const showContent = content => {
 const hideContent = content => {
   content.style.opacity = '0'
   content.style.display = 'none'
+
+  const buttons = content.querySelectorAll('.button')
+  Array.from(buttons).forEach(button => {
+    button.disabled = true
+  })
 }
 
 [...allProjects].forEach(project => {
