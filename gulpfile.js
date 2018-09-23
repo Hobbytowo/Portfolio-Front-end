@@ -85,6 +85,16 @@ gulp.task('js', () => {
 })
 // e/o JS
 
+// Images
+const imagemin = require('gulp-imagemin')
+
+gulp.task('images', () =>
+  gulp.src('./src/images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/static'))
+)
+// e/o Images
+
 // Eslint
 const eslint = require('gulp-eslint')
 const eslintConfig = require('./.eslintrc')
@@ -94,7 +104,6 @@ gulp.task('eslint', () => {
     .pipe(eslint(eslintConfig))
     .pipe(eslint.format())
 })
-
 // e/o Eslint
 
 gulp.task('watch', ['html', 'css', 'js'], () => {

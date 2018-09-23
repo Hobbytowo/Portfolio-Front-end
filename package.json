@@ -30,6 +30,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-file-include": "^2.0.1",
     "gulp-html-minifier": "^0.1.8",
+    "gulp-imagemin": "^4.1.0",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^4.0.1",
     "webpack-stream": "^4.0.3"
