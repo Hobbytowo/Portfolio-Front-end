@@ -31,6 +31,7 @@ Single page website with mine (junior front-end developer) projects.
 - Github, codepen, instagram links
 ### Other
 - Preloader
+- Smooth scroll
 
 ## Setup
 
