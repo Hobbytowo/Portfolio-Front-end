@@ -39,6 +39,7 @@ body{
     position: absolute;
     left: calc(50vw - 1rem);
     animation: arrowDown 2s infinite;
+    cursor: pointer;
   }
 
   & .text{
