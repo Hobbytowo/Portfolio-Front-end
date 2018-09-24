@@ -26,6 +26,5 @@ buttonScrollUp.addEventListener('click', e => {
 })
 
 buttonScrollDown.addEventListener('click', () => {
-  console.log('click')
   scrollDown()
 })
