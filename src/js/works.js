@@ -5,7 +5,7 @@ const projects = [
     ind: 0,
     name: 'chart',
     title: 'Pie Chart Creator',
-    discritpion: 'Pure JavScript application',
+    descritpion: 'Pure JavScript application',
     imgAlt: 'Pie chart with tooltip',
     bgColor: '#0B4D16',
     codeLink: 'https://github.com/Hobbytowo/PieChart-Creator',
@@ -16,7 +16,7 @@ const projects = [
     ind: 1,
     name: 'solitaire',
     title: 'Spider Solitaire',
-    discritpion: 'Game in Vue.js',
+    descritpion: 'Game in Vue.js',
     imgAlt: 'Cards sorted in Spider Solitaire Game',
     bgColor: '#b70000',
     codeLink: 'https://github.com/Hobbytowo/spider-solitaire-game',
@@ -27,7 +27,7 @@ const projects = [
     ind: 2,
     name: 'hogwart',
     title: 'Hogwarts Website',
-    discritpion: 'School website build with Bootstrap',
+    descritpion: 'School website built with Bootstrap',
     imgAlt: 'Herbs of Hogwarts Houses on Hogwarts Website',
     bgColor: '#333',
     codeLink: 'https://github.com/Hobbytowo/Hogwarts-School-website',
@@ -38,7 +38,7 @@ const projects = [
     ind: 3,
     name: 'hairdresser',
     title: 'Hairdresser Website',
-    discritpion: 'Pure JavaScript single page website without any library',
+    descritpion: 'Pure JavaScript single page website without any library',
     imgAlt: 'Header and menu on Hairdresser Website, woman with colorful hair',
     bgColor: 'rgb(38, 21, 58)',
     codeLink: 'https://github.com/Hobbytowo/SPA-Hairdresser',
@@ -49,7 +49,7 @@ const projects = [
     ind: 4,
     name: 'todo',
     title: 'ToDo Application',
-    discritpion: 'Simple ToDo in Vue.js',
+    descritpion: 'Simple ToDo in Vue.js',
     imgAlt: 'Form to creating ToDo list',
     bgColor: '#192d42',
     codeLink: 'https://github.com/Hobbytowo/ToDo-App-Vue.js',
@@ -60,7 +60,7 @@ const projects = [
     ind: 5,
     name: 'weather',
     title: 'Weather Application',
-    discritpion: 'JavScript, geolocation and AJAX',
+    descritpion: 'JavScript, geolocation and AJAX',
     imgAlt: 'Weather discription for example city: New York',
     bgColor: '#29b8e5',
     codeLink: 'https://github.com/Hobbytowo/WeatherApp',
@@ -71,7 +71,7 @@ const projects = [
     ind: 6,
     name: 'watch',
     title: 'Watch animation',
-    discritpion: 'Simple digital and analog watch animation',
+    descritpion: 'Simple digital and analog watch animation',
     imgAlt: 'Digital and analog watch',
     bgColor: '#f4a641',
     codeLink: 'https://codepen.io/Paradoks/pen/vdoGab',
@@ -82,7 +82,7 @@ const projects = [
     ind: 7,
     name: 'fractalTree',
     title: 'Fractal Tree',
-    discritpion: 'JavaScript and Canvas, electing properties',
+    descritpion: 'JavaScript and Canvas, electing properties',
     imgAlt: 'Fractal Tree with form for changing properties of tree',
     bgColor: '#00b740',
     codeLink: 'https://codepen.io/Paradoks/pen/yxyqZG',
@@ -93,7 +93,7 @@ const projects = [
     ind: 8,
     name: 'portfolio',
     title: 'Portfolio',
-    discritpion: 'Place with my excellent projects ;)',
+    descritpion: 'Place with my excellent projects ;)',
     imgAlt: 'Header of this website',
     bgColor: '#001a28',
     codeLink: 'https://github.com/Hobbytowo/Portfolio-Front-end',
@@ -122,7 +122,7 @@ const addProject = project => {
       alt="${ project.imgAlt }">
     <div class="project__content content content--${ project.name }">
       <h3 class="project__title">${ project.title }</h3>
-      <h4 class="project__discritpion">${ project.discritpion }</h4>
+      <h4 class="project__discritpion">${ project.descritpion }</h4>
       <div class="project__buttons">
         <a href="${ project.codeLink }">
           <button
