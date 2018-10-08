@@ -42,6 +42,9 @@ $ npm install
 # serve with reload
 $ gulp watch
 
+# images compression
+$ gulp images
+
 # build
 $ gulp
 ```
