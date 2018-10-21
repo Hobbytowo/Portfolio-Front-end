@@ -2,7 +2,6 @@
 
 const projects = [
   {
-    ind: 9,
     name: 'colors',
     title: 'Colors Tester',
     descritpion: 'Colors combination tester checking contrast ratio due to WCAG',
@@ -13,7 +12,6 @@ const projects = [
     filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'React']
   },
   {
-    ind: 8,
     name: 'chart',
     title: 'Pie Chart Creator',
     descritpion: 'Pure JavScript application',
@@ -24,7 +22,6 @@ const projects = [
     filters: ['Show all', 'SPA', 'JavaScript', 'SASS', 'Canvas', 'Gulp']
   },
   {
-    ind: 7,
     name: 'solitaire',
     title: 'Spider Solitaire',
     descritpion: 'Game in Vue.js',
@@ -35,7 +32,6 @@ const projects = [
     filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'Vue.js']
   },
   {
-    ind: 6,
     name: 'hogwart',
     title: 'Hogwarts Website',
     descritpion: 'School website built with Bootstrap',
@@ -46,7 +42,6 @@ const projects = [
     filters: ['Show all', 'Website', 'Bootstrap', 'JQuery', 'SASS']
   },
   {
-    ind: 5,
     name: 'hairdresser',
     title: 'Hairdresser Website',
     descritpion: 'Pure JavaScript single page website without any library',
@@ -57,7 +52,6 @@ const projects = [
     filters: ['Show all', 'Website', 'JavaScript', 'SASS', 'Gulp']
   },
   {
-    ind: 4,
     name: 'todo',
     title: 'ToDo Application',
     descritpion: 'Simple ToDo in Vue.js',
@@ -68,7 +62,6 @@ const projects = [
     filters: ['Show all', 'SPA', 'Vue.js', 'SASS']
   },
   {
-    ind: 3,
     name: 'weather',
     title: 'Weather Application',
     descritpion: 'JavScript, geolocation and AJAX',
@@ -79,7 +72,6 @@ const projects = [
     filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'Ajax', 'Gulp']
   },
   {
-    ind: 2,
     name: 'watch',
     title: 'Watch animation',
     descritpion: 'Simple digital and analog watch animation',
@@ -90,18 +82,16 @@ const projects = [
     filters: ['Show all', 'Animation', 'JavaScript', 'SASS']
   },
   {
-    ind: 1,
     name: 'fractalTree',
     title: 'Fractal Tree',
     descritpion: 'JavaScript and Canvas, electing properties',
     imgAlt: 'Fractal Tree with form for changing properties of tree',
-    bgColor: '#00b740',
+    bgColor: '#303030',
     codeLink: 'https://codepen.io/Paradoks/pen/yxyqZG',
     liveLink: 'https://codepen.io/Paradoks/full/yxyqZG/',
     filters: ['Show all', 'SPA', 'JavaScript', 'SASS', 'Canvas']
   },
   {
-    ind: 0,
     name: 'portfolio',
     title: 'Portfolio',
     descritpion: 'Place with my excellent projects ;)',
