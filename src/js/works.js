@@ -100,6 +100,16 @@ const projects = [
     codeLink: 'https://github.com/Hobbytowo/Portfolio-Front-end',
     liveLink: 'https://portfolio-frontend-kedzioraweronika.netlify.com/',
     filters: ['Show all', 'Website', 'JavaScript', 'SASS', 'Canvas', 'Gulp']
+  },
+  {
+    name: 'treehouse',
+    title: 'Treehouse',
+    descritpion: 'PSD to HTML project',
+    imgAlt: 'Header of treehouse website',
+    bgColor: '#7cc576',
+    codeLink: 'https://github.com/Hobbytowo/Web-Dev-Challenge',
+    liveLink: 'https://treehouse-hobbytowo.netlify.com/',
+    filters: ['Show all', 'Website', 'JQuery', 'SASS', 'Gulp']
   }
 ]
 
