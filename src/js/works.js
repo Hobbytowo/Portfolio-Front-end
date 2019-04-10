@@ -9,7 +9,7 @@ const projects = [
     bgColor: '#755c72',
     codeLink: 'https://github.com/Hobbytowo/Colors-Tester',
     liveLink: 'https://colors-ratio-tester-hobbytowo.netlify.com/',
-    filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'React']
+    filters: ['Show all', 'SPA', 'SASS', 'React']
   },
   {
     name: 'chart',
@@ -19,7 +19,7 @@ const projects = [
     bgColor: '#0B4D16',
     codeLink: 'https://github.com/Hobbytowo/PieChart-Creator',
     liveLink: 'https://hobbytowo.github.io/PieChart-Creator/',
-    filters: ['Show all', 'SPA', 'JavaScript', 'SASS', 'Canvas', 'Gulp']
+    filters: ['Show all', 'SPA', 'Vanilla', 'SASS', 'Canvas', 'Gulp']
   },
   {
     name: 'solitaire',
@@ -29,7 +29,7 @@ const projects = [
     bgColor: '#b70000',
     codeLink: 'https://github.com/Hobbytowo/spider-solitaire-game',
     liveLink: 'https://hobbytowo-spider-solitaire-game.netlify.com/',
-    filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'Vue.js']
+    filters: ['Show all', 'SPA', 'SASS', 'Vue.js']
   },
   {
     name: 'hogwart',
@@ -49,7 +49,7 @@ const projects = [
     bgColor: 'rgb(38, 21, 58)',
     codeLink: 'https://github.com/Hobbytowo/SPA-Hairdresser',
     liveLink: 'https://hobbytowo.github.io/SPA-Hairdresser/',
-    filters: ['Show all', 'Website', 'JavaScript', 'SASS', 'Gulp']
+    filters: ['Show all', 'Website', 'Vanilla', 'SASS', 'Gulp']
   },
   {
     name: 'todo',
@@ -65,11 +65,11 @@ const projects = [
     name: 'weather',
     title: 'Weather Application',
     description: 'JavScript, geolocation and AJAX',
-    imgAlt: 'Weather discription for example city: New York',
+    imgAlt: 'Weather description for example city: New York',
     bgColor: '#29b8e5',
     codeLink: 'https://github.com/Hobbytowo/WeatherApp',
     liveLink: 'https://hobbytowo.github.io/WeatherApp/',
-    filters: ['Show all', 'SPA', 'SASS', 'JavaScript', 'Ajax', 'Gulp']
+    filters: ['Show all', 'SPA', 'SASS', 'Vanilla', 'Ajax', 'Gulp']
   },
   {
     name: 'watch',
@@ -79,7 +79,7 @@ const projects = [
     bgColor: '#f4a641',
     codeLink: 'https://codepen.io/Paradoks/pen/vdoGab',
     liveLink: 'https://codepen.io/Paradoks/full/vdoGab/',
-    filters: ['Show all', 'Animation', 'JavaScript', 'SASS']
+    filters: ['Show all', 'Animation', 'Vanilla', 'SASS']
   },
   {
     name: 'fractalTree',
@@ -89,7 +89,7 @@ const projects = [
     bgColor: '#303030',
     codeLink: 'https://codepen.io/Paradoks/pen/yxyqZG',
     liveLink: 'https://codepen.io/Paradoks/full/yxyqZG/',
-    filters: ['Show all', 'SPA', 'JavaScript', 'SASS', 'Canvas']
+    filters: ['Show all', 'SPA', 'Vanilla', 'SASS', 'Canvas']
   },
   {
     name: 'portfolio',
@@ -99,7 +99,7 @@ const projects = [
     bgColor: '#001a28',
     codeLink: 'https://github.com/Hobbytowo/Portfolio-Front-end',
     liveLink: 'https://portfolio-frontend-kedzioraweronika.netlify.com/',
-    filters: ['Show all', 'Website', 'JavaScript', 'SASS', 'Canvas', 'Gulp']
+    filters: ['Show all', 'Website', 'Vanilla', 'SASS', 'Canvas', 'Gulp']
   },
   {
     name: 'treehouse',
