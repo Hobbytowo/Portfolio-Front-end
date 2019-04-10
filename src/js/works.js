@@ -133,7 +133,7 @@ const addProject = project => {
       alt="${ project.imgAlt }">
     <div class="project__content content content--${ project.name }">
       <h3 class="project__title">${ project.title }</h3>
-      <h4 class="project__discritpion">${ project.description }</h4>
+      <h4 class="project__descritpion">${ project.description }</h4>
       <div class="project__buttons">
         <a href="${ project.codeLink }">
           <button
