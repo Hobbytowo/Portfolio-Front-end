@@ -7,43 +7,28 @@
     font-size: 50px;
     color: #333;
   }
-
-  & .text{
-    font-size: 16px;
-    text-align: justify;
-    padding: 20px;
-    font-family: arial, cursive;
-    color: #555;
-
-    &--center{
-      text-align: center;
-    }
-
-    &--color{
-      padding: 0;
-      color: #000;
-    }
-  }
-
 }
 
 .features{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   z-index: 2;
   background-color: #ccc;
+
   & .feature{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     text-align: center;
     padding-top: 15px;
+    margin: 10px;
 
     &:nth-child(odd){
-      background-color: $secondaryColor;
+      background-color: $mainColor;
     }
     &:nth-child(even){
-      background-color: $mainColor;
+      background-color: $secondaryColor;
     }
   }
 }
@@ -51,25 +36,5 @@
 @media (min-width: 1396px){
   .about{
     padding: 0 30%;
-  }
-}
-
-@media (max-width: 956px){
-  .about{
-    padding: 0 10%;
-  }
-}
-
-@media (max-width: 456px){
-  .about{
-    padding: 0 4%;
-
-    & .text{
-      text-align: left;
-
-      &--center{
-        text-align: center;
-      }
-    }
   }
 }
