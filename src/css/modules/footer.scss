@@ -2,33 +2,28 @@
   background-color: #001019;
   color: #ddd;
   text-align: center;
-  padding: 60px 0 60px;
+  padding: 60px 0 30px;
   font-size: 18px;
   position: relative;
-
-  & .text{
-    &--color{
-      color: #00b740;
-    }
-  }
 
   & .icons{
     display: flex;
     justify-content: center;
   }
 
-  .fas, .fab{
+  .fas, .fab {
     font-size: 2rem;
     cursor: pointer;
     color: #ccc;
     transition: all 0.3s;
     margin: -20px 40px 30px;
+
     &:hover{
       color: #f7ef5d;
     }
   }
 
-  .fa-angle-double-up{
+  .fa-angle-double-up {
     font-size: 3rem;
     margin: 0;
     will-change: padding;
@@ -37,6 +32,7 @@
     top: -20px;
     right: calc(3rem);
     color: #00b740;
+
     &:hover{
       color: white;
     }
