@@ -14,7 +14,7 @@
     top: calc(50% - 50px);
     left: calc(50% - 50px);
     will-change: transform;
-    animation: ease-in-out spinner 7s infinite;
+    animation: ease-in-out spinner 5s infinite alternate;
     transform-origin: 50%;
     border-radius: 50%;
 
@@ -42,6 +42,6 @@
 
 @keyframes spinner {
   100% {
-    transform: rotate3d(1, 0, 0, 1440deg);
+    transform: rotate3d(0, 0, 1, 1440deg);
   }
 }
