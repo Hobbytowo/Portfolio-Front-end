@@ -3,3 +3,4 @@ dist/*.html
 dist/*.js
 dist/*.css
 src/images
+package-lock.json
