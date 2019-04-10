@@ -40,10 +40,10 @@
     padding-top: 15px;
 
     &:nth-child(odd){
-      background-color: #f7ef5d;
+      background-color: $secondaryColor;
     }
     &:nth-child(even){
-      background-color: #00b740;
+      background-color: $mainColor;
     }
   }
 }

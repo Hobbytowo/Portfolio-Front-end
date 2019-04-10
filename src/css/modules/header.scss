@@ -3,7 +3,7 @@
   height: 100vh;
   position: relative;
   color: #ccc;
-  background-color: #001a28;
+  background-color: $backgroundColor;
   display: flex;
 
   &__canvas {

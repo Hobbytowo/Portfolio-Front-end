@@ -1,5 +1,5 @@
 .contact{
-  background-color: #001a28;
+  background-color: $backgroundColor;
   color: #fff;
   margin-top: 150px;
 
@@ -11,7 +11,7 @@
     text-align: center;
     font-size: 40px;
     font-style: normal;
-    color: #f7ef5d;
+    color: $secondaryColor;
     transition: all 0.2s;
     padding-top: 150px;
     padding-bottom: 60px;
@@ -43,8 +43,9 @@
     font-size: 23px;
     padding: 20px 0;
     transition: all .3s;
+
     &:hover{
-      color: #f7ef5d;
+      color: $secondaryColor;
     }
   }
 }

@@ -19,7 +19,7 @@
     margin: -20px 40px 30px;
 
     &:hover{
-      color: #f7ef5d;
+      color: $secondaryColor;
     }
   }
 
@@ -31,7 +31,7 @@
     position: absolute;
     top: -20px;
     right: calc(3rem);
-    color: #00b740;
+    color: $mainColor;
 
     &:hover{
       color: white;

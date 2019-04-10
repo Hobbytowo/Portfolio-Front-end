@@ -1,5 +1,5 @@
 .preloader {
-  background-color: #001a28;
+  background-color: $backgroundColor;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,13 +27,13 @@
     }
 
     &::after{
-      background-color: #f7ef5d;
+      background-color: $secondaryColor;
       bottom: 0;
       right: 0;
     }
 
     &::before{
-      background-color: #00b740;
+      background-color: $mainColor;
       top: 0;
       left: 0;
     }
