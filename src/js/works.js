@@ -4,7 +4,7 @@ const projects = [
   {
     name: 'colors',
     title: 'Colors Tester',
-    descritpion: 'Colors combination tester checking contrast ratio due to WCAG',
+    description: 'Colors combination tester checking contrast ratio due to WCAG',
     imgAlt: 'Colors tester application with counted ratio and ranges to change colors values',
     bgColor: '#755c72',
     codeLink: 'https://github.com/Hobbytowo/Colors-Tester',
@@ -14,7 +14,7 @@ const projects = [
   {
     name: 'chart',
     title: 'Pie Chart Creator',
-    descritpion: 'Pure JavScript application',
+    description: 'Pure JavScript application',
     imgAlt: 'Pie chart with tooltip',
     bgColor: '#0B4D16',
     codeLink: 'https://github.com/Hobbytowo/PieChart-Creator',
@@ -24,7 +24,7 @@ const projects = [
   {
     name: 'solitaire',
     title: 'Spider Solitaire',
-    descritpion: 'Game in Vue.js',
+    description: 'Game in Vue.js',
     imgAlt: 'Cards sorted in Spider Solitaire Game',
     bgColor: '#b70000',
     codeLink: 'https://github.com/Hobbytowo/spider-solitaire-game',
@@ -34,7 +34,7 @@ const projects = [
   {
     name: 'hogwart',
     title: 'Hogwarts Website',
-    descritpion: 'School website built with Bootstrap',
+    description: 'School website built with Bootstrap',
     imgAlt: 'Herbs of Hogwarts Houses on Hogwarts Website',
     bgColor: '#333',
     codeLink: 'https://github.com/Hobbytowo/Hogwarts-School-website',
@@ -44,7 +44,7 @@ const projects = [
   {
     name: 'hairdresser',
     title: 'Hairdresser Website',
-    descritpion: 'Pure JavaScript single page website without any library',
+    description: 'Pure JavaScript single page website without any library',
     imgAlt: 'Header and menu on Hairdresser Website, woman with colorful hair',
     bgColor: 'rgb(38, 21, 58)',
     codeLink: 'https://github.com/Hobbytowo/SPA-Hairdresser',
@@ -54,7 +54,7 @@ const projects = [
   {
     name: 'todo',
     title: 'ToDo Application',
-    descritpion: 'Simple ToDo in Vue.js',
+    description: 'Simple ToDo in Vue.js',
     imgAlt: 'Form to creating ToDo list',
     bgColor: '#192d42',
     codeLink: 'https://github.com/Hobbytowo/ToDo-App-Vue.js',
@@ -64,7 +64,7 @@ const projects = [
   {
     name: 'weather',
     title: 'Weather Application',
-    descritpion: 'JavScript, geolocation and AJAX',
+    description: 'JavScript, geolocation and AJAX',
     imgAlt: 'Weather discription for example city: New York',
     bgColor: '#29b8e5',
     codeLink: 'https://github.com/Hobbytowo/WeatherApp',
@@ -74,7 +74,7 @@ const projects = [
   {
     name: 'watch',
     title: 'Watch animation',
-    descritpion: 'Simple digital and analog watch animation',
+    description: 'Simple digital and analog watch animation',
     imgAlt: 'Digital and analog watch',
     bgColor: '#f4a641',
     codeLink: 'https://codepen.io/Paradoks/pen/vdoGab',
@@ -84,7 +84,7 @@ const projects = [
   {
     name: 'fractalTree',
     title: 'Fractal Tree',
-    descritpion: 'JavaScript and Canvas, electing properties',
+    description: 'JavaScript and Canvas, electing properties',
     imgAlt: 'Fractal Tree with form for changing properties of tree',
     bgColor: '#303030',
     codeLink: 'https://codepen.io/Paradoks/pen/yxyqZG',
@@ -94,7 +94,7 @@ const projects = [
   {
     name: 'portfolio',
     title: 'Portfolio',
-    descritpion: 'Place with my excellent projects ;)',
+    description: 'Place with my excellent projects ;)',
     imgAlt: 'Header of this website',
     bgColor: '#001a28',
     codeLink: 'https://github.com/Hobbytowo/Portfolio-Front-end',
@@ -104,7 +104,7 @@ const projects = [
   {
     name: 'treehouse',
     title: 'Treehouse',
-    descritpion: 'PSD to HTML project',
+    description: 'PSD to HTML project',
     imgAlt: 'Header of treehouse website',
     bgColor: '#7cc576',
     codeLink: 'https://github.com/Hobbytowo/Web-Dev-Challenge',
@@ -133,7 +133,7 @@ const addProject = project => {
       alt="${ project.imgAlt }">
     <div class="project__content content content--${ project.name }">
       <h3 class="project__title">${ project.title }</h3>
-      <h4 class="project__discritpion">${ project.descritpion }</h4>
+      <h4 class="project__discritpion">${ project.description }</h4>
       <div class="project__buttons">
         <a href="${ project.codeLink }">
           <button
