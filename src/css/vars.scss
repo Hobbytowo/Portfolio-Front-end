@@ -1,0 +1,5 @@
+$treeHeight: 100vh;
+$treeWidth: calc(#{ $treeHeight } / 6 * 8);
+$treeCenter: calc(50vw - #{ $treeWidth } / 2);
+$treeWidthPortrait: 100vw;
+$treeHeightPortrait: calc(100vw / 8 * 6);
